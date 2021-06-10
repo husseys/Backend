@@ -20,7 +20,7 @@ router.get('/', (request, response, next)=>{
     })
 });
 
-//GET /api/books/:id - Gets the book with the given id (catch error of id not found!)
+//GET /api/books/:id - Gets the book with the given id (catch error if id not found!)
 router.get('/:id', (request, response, next) =>{
     BookSchema
         .findById(request.params.id, function(error, book) {
